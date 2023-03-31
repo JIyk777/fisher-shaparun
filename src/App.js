@@ -1,10 +1,10 @@
+import Box from 'components/Box';
+
 function App() {
   return (
-    <div className="App">
-      <p>My project</p>
-      <p>My app</p>
-      <p>My app</p>
-    </div>
+    <Box justifyContent="center" display="flex" color="blue">
+      <p>Hi my friends</p>
+    </Box>
   );
 }
 
