@@ -1,11 +1,7 @@
-import Box from 'components/Box';
+import HomePage from 'pages/HomePage';
 
 function App() {
-  return (
-    <Box justifyContent="center" display="flex" color="blue">
-      <p>Hi my friends</p>
-    </Box>
-  );
+  return <HomePage />;
 }
 
 export default App;
