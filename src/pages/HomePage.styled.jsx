@@ -19,6 +19,10 @@ export const Container = styled.div`
   }
 `;
 
-export const Main = styled.div`
+export const Menu = styled.ul`
   background-color: #e7eaf2;
+`;
+
+export const MenuItem = styled.li`
+  background-color: #ffffff;
 `;

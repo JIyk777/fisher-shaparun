@@ -1,12 +1,22 @@
 import Header from 'components/Header/Header';
 
-import { Container, Main } from './HomePage.styled';
+import { Container, Menu, MenuItem } from './HomePage.styled';
+
+import { ReactComponent as HomeBtn } from 'assets/images/svg/homeBtn.svg';
+import { ReactComponent as StatBtn } from 'assets/images/svg/statBtn.svg';
 
 const HomePage = () => {
   return (
     <Container>
       <Header />
-      <Main></Main>
+      <Menu>
+        <MenuItem>
+          <HomeBtn />
+        </MenuItem>
+        <MenuItem>
+          <StatBtn />
+        </MenuItem>
+      </Menu>
     </Container>
   );
 };
