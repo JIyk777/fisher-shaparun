@@ -7,11 +7,11 @@ export const LogoContainer = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  width: ${props => props.theme.space[7]}px;
+  width: ${props => props.theme.space[15]}px;
   border-radius: 100%;
 
   @media screen and (min-width: ${props => props.theme.breakpoints[1]}px) {
-    width: ${props => props.theme.space[8]}px;
+    width: ${props => props.theme.space[20]}px;
   }
 `;
 

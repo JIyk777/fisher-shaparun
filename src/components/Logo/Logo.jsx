@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <LogoContainer>
       <LogoImg src={logo} alt="logo" />
-      <IconText>РИБАЛКА</IconText>
+      <IconText>Fishing</IconText>
     </LogoContainer>
   );
 };

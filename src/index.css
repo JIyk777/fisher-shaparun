@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  padding: 0;
 }
 
 *,
@@ -49,4 +50,8 @@ tr,
 th {
   padding: 0;
   margin: 0;
+}
+
+.coclo {
+  margin-top: ;
 }

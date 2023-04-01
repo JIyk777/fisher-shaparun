@@ -1,23 +1,24 @@
 import Header from 'components/Header/Header';
+import MainNav from 'components/MainNav/MainNav';
+import TotalWeight from 'components/TotalWeight/TotalWeight';
 
-import { Container, Menu, MenuItem } from './HomePage.styled';
-
-import { ReactComponent as HomeBtn } from 'assets/images/svg/homeBtn.svg';
-import { ReactComponent as StatBtn } from 'assets/images/svg/statBtn.svg';
+import { HeaderSection, PostsSection, Container } from './HomePage.styled';
 
 const HomePage = () => {
   return (
-    <Container>
-      <Header />
-      <Menu>
-        <MenuItem>
-          <HomeBtn />
-        </MenuItem>
-        <MenuItem>
-          <StatBtn />
-        </MenuItem>
-      </Menu>
-    </Container>
+    <>
+      <HeaderSection>
+        <Container>
+          <Header />
+        </Container>
+      </HeaderSection>
+      <PostsSection>
+        <Container>
+          <MainNav />
+          <TotalWeight />
+        </Container>
+      </PostsSection>
+    </>
   );
 };
 export default HomePage;

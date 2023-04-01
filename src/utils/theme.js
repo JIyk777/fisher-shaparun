@@ -2,9 +2,20 @@ const theme = {
   colors: {
     blue: '#07c',
     green: '#0fa',
-    secondTextColor: '#BDBDBD',
+    secondTextColor: '#A6A6A6',
+    mainWhite: '#FFFFFF',
+    mainBgColor: '#e7eaf2',
+    menuBtnColor: '#6E78E8',
   },
-  space: [0, 4, 8, 16, 20, 30, 40, 60, 80, 128, 256, 512],
+  fontFamilies: {
+    secondFontFamily: 'Poppins',
+  },
+  radii: [4, 8, 30],
+  sizes: [18, 38, 54, 70, 320, 336, 395],
+  space: [
+    0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76,
+    80,
+  ],
   fontSizes: [12, 14, 16, 18, 20, 24, 32],
   breakpoints: [480, 768, 1280],
   fontWeights: {
@@ -14,6 +25,7 @@ const theme = {
     bold: 700,
     extraBold: 800,
   },
-  lineHeights: [27],
+  lineHeights: [18, 27, 45],
 };
+
 export default theme;

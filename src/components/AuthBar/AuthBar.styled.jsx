@@ -7,5 +7,5 @@ export const AuthBarContainer = styled.div`
 export const AuthBarText = styled.span`
   color: ${props => props.theme.colors.secondTextColor};
   font-size: ${props => props.theme.fontSizes[3]}px;
-  line-height: ${props => props.theme.lineHeights[0]}px;
+  line-height: ${props => props.theme.lineHeights[1]}px;
 `;
