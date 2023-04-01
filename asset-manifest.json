@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/fisher-shaparun/static/css/main.235e3c69.css",
-    "main.js": "/fisher-shaparun/static/js/main.f5c38f42.js",
+    "main.js": "/fisher-shaparun/static/js/main.caaeb7dd.js",
+    "static/media/statBtn.svg": "/fisher-shaparun/static/media/statBtn.88d035c850746203b1e2fe58c26ee5f1.svg",
     "index.html": "/fisher-shaparun/index.html",
+    "static/media/homeBtn.svg": "/fisher-shaparun/static/media/homeBtn.d348a3737c35f5aa794fdfc67b8720bc.svg",
     "main.235e3c69.css.map": "/fisher-shaparun/static/css/main.235e3c69.css.map",
-    "main.f5c38f42.js.map": "/fisher-shaparun/static/js/main.f5c38f42.js.map"
+    "main.caaeb7dd.js.map": "/fisher-shaparun/static/js/main.caaeb7dd.js.map"
   },
   "entrypoints": [
     "static/css/main.235e3c69.css",
-    "static/js/main.f5c38f42.js"
+    "static/js/main.caaeb7dd.js"
   ]
 }
