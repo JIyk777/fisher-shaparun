@@ -13,7 +13,7 @@ const HomePage = () => {
   // const isTablet = useMediaQuery({ minWidth: 768 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   return (
-    <>
+    <Box height="100%">
       <HeaderSection>
         <Container>
           <Header />
@@ -35,7 +35,7 @@ const HomePage = () => {
           </Box>
         </Container>
       </PostsSection>
-    </>
+    </Box>
   );
 };
 export default HomePage;
