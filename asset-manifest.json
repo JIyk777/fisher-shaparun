@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fisher-shaparun/static/css/main.741324ba.css",
-    "main.js": "/fisher-shaparun/static/js/main.94aca72d.js",
+    "main.css": "/fisher-shaparun/static/css/main.71c80fc1.css",
+    "main.js": "/fisher-shaparun/static/js/main.5f13bcba.js",
     "index.html": "/fisher-shaparun/index.html",
-    "main.741324ba.css.map": "/fisher-shaparun/static/css/main.741324ba.css.map",
-    "main.94aca72d.js.map": "/fisher-shaparun/static/js/main.94aca72d.js.map"
+    "main.71c80fc1.css.map": "/fisher-shaparun/static/css/main.71c80fc1.css.map",
+    "main.5f13bcba.js.map": "/fisher-shaparun/static/js/main.5f13bcba.js.map"
   },
   "entrypoints": [
-    "static/css/main.741324ba.css",
-    "static/js/main.94aca72d.js"
+    "static/css/main.71c80fc1.css",
+    "static/js/main.5f13bcba.js"
   ]
 }
