@@ -5,8 +5,11 @@ const theme = {
     secondTextColor: '#A6A6A6',
     mainWhite: '#FFFFFF',
     mainBgColor: '#e7eaf2',
+
     menuBtnColor: '#6E78E8',
-    addBtn: '#24CCA7',
+    mainBtn: '#24CCA7',
+    btnShadow: 'rgba(36, 204, 167, 0.5)',
+
     backDrop: 'rgba(0, 0, 0, 0.25)',
     modalBackgroundColorWhite: 'rgba(255, 255, 255, 1)',
     mainAccentColor: '#4a56e2',

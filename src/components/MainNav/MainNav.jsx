@@ -14,14 +14,14 @@ const MainNav = () => {
     <Nav>
       <NavItem>
         {isMobile && (
-          <NavLink href="/">
+          <NavLink href="">
             <MenuIcon width={1} height={1}>
               <MdHome color="#FFFFFF" size="28px" />
             </MenuIcon>
           </NavLink>
         )}
         {isTablet && (
-          <NavLink href="/">
+          <NavLink href="">
             <MenuIcon width={0} height={0} borderRadius={0}>
               <MdHome color="#FFFFFF" size="16px" />
             </MenuIcon>
@@ -31,14 +31,14 @@ const MainNav = () => {
       </NavItem>
       <NavItem>
         {isMobile && (
-          <NavLink href="/">
+          <NavLink href="">
             <MenuIcon width={1} height={1}>
               <ImStatsDots color="#FFFFFF" size="18px" />
             </MenuIcon>
           </NavLink>
         )}
         {isTablet && (
-          <NavLink href="/">
+          <NavLink href="">
             <MenuIcon width={0} height={0} borderRadius={0}>
               <ImStatsDots color="#FFFFFF" size="10px" />
             </MenuIcon>

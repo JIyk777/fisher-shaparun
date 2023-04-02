@@ -4,7 +4,11 @@ import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
 
 import ModalUniversal from '../ModalUniversal';
 
-import { ModalContainer } from './ModalAddFishing.styled';
+import {
+  ModalContainer,
+  CloseModalBtn,
+  ModalTitle,
+} from './ModalAddFishing.styled';
 
 const ModalAddFishing = () => {
   const dispatch = useDispatch();
@@ -37,10 +41,10 @@ const ModalAddFishing = () => {
   return (
     <ModalUniversal onClose={handleCloseModal} onClick={handleBackdropClick}>
       <ModalContainer>
-        <h2>Add fishing</h2>
-        <button type="button" onClick={handleCloseModal}>
-          cancel
-        </button>
+        <ModalTitle>Add fishing</ModalTitle>
+        <CloseModalBtn type="button" onClick={handleCloseModal}>
+          Cancel
+        </CloseModalBtn>
       </ModalContainer>
     </ModalUniversal>
   );

@@ -18,6 +18,19 @@ export const PostContainer = styled.div`
 
 export const PostImg = styled.img`
   border-radius: ${props => props.theme.radii[1]}px;
+
+  @media screen and (max-width: 479px) {
+    min-height: 175px;
+  }
+  @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
+    height: 280px;
+  }
+  @media screen and (min-width: ${props => props.theme.breakpoints[1]}px) {
+    height: 225px;
+  }
+  @media screen and (min-width: ${props => props.theme.breakpoints[2]}px) {
+    height: 160px;
+  }
 `;
 
 export const PostList = styled.ul`
@@ -60,10 +73,17 @@ export const AddFishingBtn = styled.button`
   width: 18px;
   height: 18px;
 
-  background-color: ${props => props.theme.colors.addBtn};
+  background-color: ${props => props.theme.colors.mainBtn};
 
   border: 0;
   border-radius: 100%;
 
   cursor: pointer;
+
+  box-shadow: 0px 3px 6px ${props => props.theme.colors.btnShadow};
+
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
 `;

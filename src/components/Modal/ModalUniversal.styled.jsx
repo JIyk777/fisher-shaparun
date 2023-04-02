@@ -24,6 +24,9 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
 
+  padding: ${props => props.theme.space[5]}px
+    ${props => props.theme.space[10]}px;
+
   border-radius: 3px;
 
   background: #ffffff;
@@ -55,7 +58,7 @@ export const CloseModalBtn = styled.button`
   justify-content: center;
   align-items: center;
 
-  background-color: ${props => props.theme.colors.addBtn};
+  background-color: ${props => props.theme.colors.mainBtn};
 
   border: 0;
   border-radius: 100%;
@@ -75,6 +78,8 @@ export const CloseModalBtn = styled.button`
   &:active {
     transform: scale(0.9);
   }
+
+  box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
 
   @media screen and (max-width: 479px) {
     display: none;

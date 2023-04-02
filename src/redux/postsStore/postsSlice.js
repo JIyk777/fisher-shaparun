@@ -47,7 +47,7 @@ const initialState = {
         longitude: '29.082062',
       },
       picture:
-        'https://www.collinsdictionary.com/images/full/river_377603497_1000.jpg',
+        'https://www.macmillandictionary.com/external/slideshow/full/152264_full.jpg',
       fishing: [
         {
           date: '02.04.2023',
@@ -79,7 +79,7 @@ const initialState = {
         longitude: '29.082062',
       },
       picture:
-        'https://www.collinsdictionary.com/images/full/river_377603497_1000.jpg',
+        'https://cdn.firstcry.com/education/2022/04/01193101/1920397988.jpg',
       fishing: [
         {
           date: '02.04.2023',
@@ -111,7 +111,7 @@ const initialState = {
         longitude: '29.082062',
       },
       picture:
-        'https://www.collinsdictionary.com/images/full/river_377603497_1000.jpg',
+        'https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Duck_River_reflections_-_20130915-143_HDR_4000x2200.jpg?crop=0%2C0%2C4000%2C2200&wid=4000&hei=2200&scl=1.0',
       fishing: [
         {
           date: '02.04.2023',
@@ -143,7 +143,7 @@ const initialState = {
         longitude: '29.082062',
       },
       picture:
-        'https://www.collinsdictionary.com/images/full/river_377603497_1000.jpg',
+        'https://www.sciencenews.org/wp-content/uploads/2022/10/101722_jc_river-heat-waves_feat.jpg',
       fishing: [
         {
           date: '02.04.2023',
@@ -175,7 +175,7 @@ const initialState = {
         longitude: '29.082062',
       },
       picture:
-        'https://www.collinsdictionary.com/images/full/river_377603497_1000.jpg',
+        'https://www.riverlevelzone.co.uk/wp-content/uploads/2020/10/River-Wharfe.jpg',
       fishing: [
         {
           date: '02.04.2023',
@@ -185,7 +185,7 @@ const initialState = {
         },
         {
           date: '01.04.2023',
-          weight: 7,
+          weight: 30,
           fishSpecies: ['Crucian', 'Carp', 'Roach', 'Bream'],
           img: 'https://a-z-animals.com/media/2022/04/shutterstock_1666284073.jpg',
         },
