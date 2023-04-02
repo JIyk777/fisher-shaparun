@@ -1,9 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import {
-//   addTransaction,
-//   updateTransactionsNew,
-//   updateTransactions,
-// } from './financeOperation';
+
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
 
@@ -205,15 +201,6 @@ const initialState = {
   ],
 };
 
-// const handlePending = state => {
-//   state.isLoading = true;
-// };
-
-// const handleRejected = (state, action) => {
-//   state.isLoading = false;
-//   state.error = action.payload;
-// };
-
 export const postsSlice = createSlice({
   name: 'posts',
   initialState,
@@ -222,42 +209,6 @@ export const postsSlice = createSlice({
       state.isLoading = action.payload;
     },
   },
-  // extraReducers: builder => {
-  //   builder
-
-  //     .addCase(updateTransactionsNew.pending, (state, action) => {
-  //       state.error = action.payload;
-  //     })
-  //     .addCase(updateTransactionsNew.rejected, (state, action) => {
-  //       state.error = action.payload;
-  //     })
-  //     .addCase(updateTransactionsNew.fulfilled, (state, action) => {
-  //       state.data = action.payload?.transactions;
-  //       state.totalBalance = action.payload?.totalBalance;
-  //       state.totalQuantityTransactions = action.payload?.quantityTransactions;
-  //       state.isLoggedIn = true;
-  //       state.isLoading = false;
-  //     })
-
-  //     .addCase(updateTransactions.pending, handlePending)
-  //     .addCase(updateTransactions.rejected, handleRejected)
-  //     .addCase(updateTransactions.fulfilled, (state, action) => {
-  //       state.data = action.payload?.transactions;
-  //       state.totalBalance = action.payload?.totalBalance;
-  //       state.totalQuantityTransactions = action.payload?.quantityTransactions;
-  //       state.isLoggedIn = true;
-  //       state.isLoading = false;
-  //     })
-
-  //     .addCase(addTransaction.pending, handlePending)
-  //     .addCase(addTransaction.rejected, handleRejected)
-  //     .addCase(addTransaction.fulfilled, (state, action) => {
-  //       state.data = action.payload.rdyTransactions;
-  //       state.totalBalance = action.payload.totalBalance;
-  //       state.totalQuantityTransactions = action.payload.updatedCount;
-  //       state.isLoading = false;
-  //     });
-  // },
 });
 
 const persistConfig = {
