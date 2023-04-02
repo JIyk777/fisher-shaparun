@@ -5,6 +5,7 @@ import Box from 'components/Box';
 import { Title, Sum } from './TotalWeight.styled';
 
 const TotalWeight = () => {
+  const isMobile = useMediaQuery({ minWidth: 320 });
   const isTablet = useMediaQuery({ minWidth: 768 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   return (
@@ -13,7 +14,7 @@ const TotalWeight = () => {
       pl={8}
       pt={2}
       pb={3}
-      width={(isDesktop && 6)||(isTablet&&5)}
+      width={(isDesktop && 6) || (isTablet && 5) || (isMobile && '100%')}
       bg="mainWhite"
       borderRadius={2}
     >

@@ -8,7 +8,7 @@ export const Nav = styled.ul`
     align-items: start;
     gap: 10px;
 
-    margin-top: 40px;
+    margin-top: ${props => props.theme.space[10]}px;
   }
 `;
 

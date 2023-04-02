@@ -20,7 +20,7 @@ export const HeaderSection = styled.div`
   background-color: ${props => props.theme.colors.mainWhite};
 `;
 export const PostsSection = styled.div`
-  height: 100vh;
+  height: 100%;
   padding-top: ${props => props.theme.space[3]}px;
   background-color: ${props => props.theme.colors.mainBgColor};
 `;
