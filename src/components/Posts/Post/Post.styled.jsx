@@ -49,3 +49,21 @@ export const PostItemValue = styled.span`
   font-size: ${props => props.theme.fontSizes[1]}px;
   color: ${props => props.theme.colors.secondTextColor};
 `;
+
+export const AddFishingBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: ${props => props.theme.colors.addBtn};
+
+  border: 0;
+  border-radius: 100%;
+
+  cursor: pointer;
+`;

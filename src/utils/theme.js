@@ -6,6 +6,10 @@ const theme = {
     mainWhite: '#FFFFFF',
     mainBgColor: '#e7eaf2',
     menuBtnColor: '#6E78E8',
+    addBtn: '#24CCA7',
+    backDrop: 'rgba(0, 0, 0, 0.25)',
+    modalBackgroundColorWhite: 'rgba(255, 255, 255, 1)',
+    mainAccentColor: '#4a56e2',
   },
   fontFamilies: {
     secondFontFamily: 'Poppins',

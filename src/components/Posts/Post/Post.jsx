@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+
 import {
   PostContainer,
   PostImg,
@@ -5,10 +7,21 @@ import {
   PostItem,
   PostItemName,
   PostItemValue,
+  AddFishingBtn,
 } from './Post.styled';
+
+import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
+
+import { BsPlus } from 'react-icons/bs';
 
 const Post = props => {
   const { name, location, picture, fishing, fishSpecies } = props.post;
+
+  const dispatch = useDispatch();
+
+  const handleAddBtn = () => {
+    dispatch(toggleShowModalAddFishing(true));
+  };
   return (
     <PostContainer>
       <PostImg src={picture} alt="river" />
@@ -24,6 +37,9 @@ const Post = props => {
         <PostItem>
           <PostItemName>Total Fishing:</PostItemName>
           <PostItemValue>{fishing.length}</PostItemValue>
+          <AddFishingBtn onClick={handleAddBtn}>
+            <BsPlus color="#FFFFFF" size="18" />
+          </AddFishingBtn>
         </PostItem>
         <PostItem>
           <PostItemName>Fish species:</PostItemName>

@@ -55,5 +55,5 @@ th {
 }
 
 .coclo {
-  justify-content: right;
+  position: absolute;
 }

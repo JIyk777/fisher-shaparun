@@ -10,10 +10,12 @@ import {
 } from 'redux-persist/es/constants';
 
 import { persistedPostsReducer } from './postsStore/postsSlice';
+import { modalReducer } from './modal/modalSlice';
 
 export const store = configureStore({
   reducer: {
     posts: persistedPostsReducer,
+    modal: modalReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
