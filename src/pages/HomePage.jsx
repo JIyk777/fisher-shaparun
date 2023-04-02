@@ -10,7 +10,7 @@ import { HeaderSection, PostsSection, Container } from './HomePage.styled';
 
 const HomePage = () => {
   const isMobile = useMediaQuery({ minWidth: 320 });
-  const isTablet = useMediaQuery({ minWidth: 768 });
+  // const isTablet = useMediaQuery({ minWidth: 768 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   return (
     <>

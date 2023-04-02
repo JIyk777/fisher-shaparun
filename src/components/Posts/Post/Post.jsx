@@ -8,7 +8,7 @@ import {
 } from './Post.styled';
 
 const Post = props => {
-  const { id, name, location, picture, fishing, fishSpecies } = props.post;
+  const { name, location, picture, fishing, fishSpecies } = props.post;
   return (
     <PostContainer>
       <PostImg src={picture} alt="river" />
