@@ -5,7 +5,7 @@ export const BackDrop = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   background-color: ${props => props.theme.colors.backDrop};
   @media screen and (max-width: 479px) {
@@ -16,14 +16,18 @@ export const BackDrop = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
 
-    padding-top: 160px;
+    padding-top: 60px;
   }
 
-  @media screen and (min-width: ${props => props.theme.breakpoints[2]}px) {
+  @media screen and (min-width: ${props => props.theme.breakpoints[1]}px) {
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
+  @media screen and (min-width: ${props => props.theme.breakpoints[2]}px) {
     padding-top: 0;
   }
 
@@ -44,6 +48,8 @@ export const ModalContent = styled.div`
   @media screen and (max-width: 479px) {
     width: 100%;
     height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
     margin: auto;

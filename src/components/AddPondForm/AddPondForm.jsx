@@ -3,8 +3,9 @@ import * as yup from 'yup';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
-import { BsCalendar3 } from 'react-icons/bs';
-import { RiScales2Line } from 'react-icons/ri';
+import { TbWorldLongitude, TbWorldLatitude } from 'react-icons/tb';
+import { MdLocationCity } from 'react-icons/md';
+import { GiWaterSplash } from 'react-icons/gi';
 import { SiCurl } from 'react-icons/si';
 
 import { useDispatch } from 'react-redux';
@@ -17,7 +18,7 @@ const AddForm = styled(Form)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${props => props.theme.space[10]}px;
+  gap: ${props => props.theme.space[4]}px;
 
   margin-top: ${props => props.theme.space[10]}px;
 
@@ -33,11 +34,13 @@ const Input = styled(Field)`
   font-weight: ${props => props.theme.fontWeights.bolt};
   font-size: ${props => props.theme.fontSizes[3]}px;
   line-height: ${props => props.theme.lineHeights[1]}px;
+  text-align: center;
 
   border: 0;
   border-bottom: 1px solid ${props => props.theme.colors.borderColor};
 
   &::placeholder {
+    text-align: center;
     font-size: ${props => props.theme.fontSizes[1]}px;
     line-height: ${props => props.theme.lineHeights[0]}px;
   }
@@ -52,6 +55,8 @@ const Input = styled(Field)`
 
 const ErrorText = styled(ErrorMessage)`
   position: absolute;
+  bottom: -20px;
+  left: 0;
   color: red;
 
   padding-left: ${props => props.theme.space[4]}px;
@@ -112,14 +117,14 @@ const AddPondForm = p => {
       <AddForm>
         <FormLabel>
           <IconBox>
-            <BsCalendar3 color="#24CCA7" size="18" />
+            <GiWaterSplash color="#24CCA7" size="18" />
           </IconBox>
           <Input type="text" placeholder="Please enter pond name" name="name" />
           <ErrorText name="name" component="div"></ErrorText>
         </FormLabel>
         <FormLabel>
           <IconBox>
-            <RiScales2Line color="#24CCA7" size="18" />
+            <MdLocationCity color="#24CCA7" size="18" />
           </IconBox>
           <Input
             type="text"
@@ -131,7 +136,7 @@ const AddPondForm = p => {
 
         <FormLabel>
           <IconBox>
-            <BsCalendar3 color="#24CCA7" size="18" />
+            <MdLocationCity color="#24CCA7" size="18" />
           </IconBox>
           <Input
             type="text"
@@ -142,7 +147,7 @@ const AddPondForm = p => {
         </FormLabel>
         <FormLabel>
           <IconBox>
-            <BsCalendar3 color="#24CCA7" size="18" />
+            <TbWorldLatitude color="#24CCA7" size="18" />
           </IconBox>
           <Input
             type="text"
@@ -153,7 +158,7 @@ const AddPondForm = p => {
         </FormLabel>
         <FormLabel>
           <IconBox>
-            <BsCalendar3 color="#24CCA7" size="18" />
+            <TbWorldLongitude color="#24CCA7" size="18" />
           </IconBox>
           <Input
             type="text"

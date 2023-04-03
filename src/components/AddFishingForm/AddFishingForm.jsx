@@ -34,11 +34,13 @@ const Input = styled(Field)`
   font-weight: ${props => props.theme.fontWeights.bolt};
   font-size: ${props => props.theme.fontSizes[3]}px;
   line-height: ${props => props.theme.lineHeights[1]}px;
+  text-align: center;
 
   border: 0;
   border-bottom: 1px solid ${props => props.theme.colors.borderColor};
 
   &::placeholder {
+    text-align: center;
     font-size: ${props => props.theme.fontSizes[1]}px;
     line-height: ${props => props.theme.lineHeights[0]}px;
   }
