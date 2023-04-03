@@ -33,7 +33,9 @@ const Post = props => {
       <PostList>
         <PostItem>
           <PostItemName>Location:</PostItemName>
-          <PostItemValue>{location.cityName}</PostItemValue>
+          <PostItemValue>
+            {location.cityName}, {location.regionName}
+          </PostItemValue>
         </PostItem>
         <PostItem>
           <PostItemName>Name:</PostItemName>

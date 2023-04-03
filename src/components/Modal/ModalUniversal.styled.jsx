@@ -36,8 +36,6 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin: auto;
-
   padding: ${props => props.theme.space[5]}px
     ${props => props.theme.space[10]}px;
 
@@ -48,11 +46,13 @@ export const ModalContent = styled.div`
     height: 100%;
   }
   @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
-    border-radius: ${props => props.theme.radii[2]}px;
+    margin: auto;
+
     width: 480px;
+
+    border-radius: ${props => props.theme.radii[2]}px;
   }
   @media screen and (min-width: ${props => props.theme.breakpoints[1]}px) {
-    margin: auto;
     width: 540px;
   }
   @media screen and (min-width: ${props => props.theme.breakpoints[2]}px) {

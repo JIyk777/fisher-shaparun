@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import Posts from 'components/Posts/Posts';
 import Box from 'components/Box';
 import ModalAddFishing from 'components/Modal/ModalAddFishing/ModalAddFishing';
-
+import ModalAddPond from 'components/Modal/ModalAddPond/ModalAddPond';
 import { modalSelectors } from 'redux/modal/modalSelectors';
 
 import { HeaderSection, PostsSection, Container } from './HomePage.styled';
@@ -18,7 +18,8 @@ const HomePage = () => {
   const isOnlyMobile = useMediaQuery({ maxWidth: 479 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
 
-  const showModal = useSelector(modalSelectors.showModalAddFishing);
+  const showModalFishing = useSelector(modalSelectors.showModalAddFishing);
+  const showModalPond = useSelector(modalSelectors.showModalAddPond);
   return (
     <Box height="100%">
       <HeaderSection>
@@ -26,7 +27,7 @@ const HomePage = () => {
           <Header />
         </Container>
       </HeaderSection>
-      {showModal && isOnlyMobile ? (
+      {showModalFishing && isOnlyMobile ? (
         <></>
       ) : (
         <PostsSection>
@@ -47,7 +48,8 @@ const HomePage = () => {
         </PostsSection>
       )}
 
-      {showModal && <ModalAddFishing />}
+      {showModalFishing && <ModalAddFishing />}
+      {showModalPond && <ModalAddPond />}
     </Box>
   );
 };
