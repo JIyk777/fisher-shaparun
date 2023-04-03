@@ -8,6 +8,9 @@ export const BackDrop = styled.div`
   height: 100vh;
 
   background-color: ${props => props.theme.colors.backDrop};
+  @media screen and (max-width: 479px) {
+    margin-top: 60px;
+  }
 
   @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
     display: flex;
@@ -27,7 +30,7 @@ export const ModalContent = styled.div`
   padding: ${props => props.theme.space[5]}px
     ${props => props.theme.space[10]}px;
 
-  border-radius: 3px;
+  border-radius: ${props => props.theme.radii[2]}px;
 
   background: #ffffff;
 

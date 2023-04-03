@@ -15,7 +15,7 @@ import { HeaderSection, PostsSection, Container } from './HomePage.styled';
 
 const HomePage = () => {
   const isMobile = useMediaQuery({ minWidth: 320 });
-
+  const isOnlyMobile = useMediaQuery({ maxWidth: 479 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
 
   const showModal = useSelector(modalSelectors.showModalAddFishing);
@@ -26,22 +26,27 @@ const HomePage = () => {
           <Header />
         </Container>
       </HeaderSection>
-      <PostsSection>
-        <Container>
-          <Box
-            display="flex"
-            flexDirection={(isDesktop && 'row') || (isMobile && 'column')}
-          >
-            <div>
-              <MainNav />
-              <TotalWeight />
-            </div>
-            <>
-              <Posts />
-            </>
-          </Box>
-        </Container>
-      </PostsSection>
+      {showModal && isOnlyMobile ? (
+        <></>
+      ) : (
+        <PostsSection>
+          <Container>
+            <Box
+              display="flex"
+              flexDirection={(isDesktop && 'row') || (isMobile && 'column')}
+            >
+              <div>
+                <MainNav />
+                <TotalWeight />
+              </div>
+              <>
+                <Posts />
+              </>
+            </Box>
+          </Container>
+        </PostsSection>
+      )}
+
       {showModal && <ModalAddFishing />}
     </Box>
   );

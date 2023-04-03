@@ -8,20 +8,28 @@ export const ModalContainer = styled.div`
 `;
 
 export const CloseModalBtn = styled.button`
-  padding: ${props => props.theme.space[2]}px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  border: 0;
-  border-radius: ${props => props.theme.radii[1]}px;
+  padding: ${props => props.theme.space[3]}px 0;
+  margin-top: ${props => props.theme.space[6]}px;
 
-  color: ${props => props.theme.colors.mainWhite};
-  background-color: ${props => props.theme.colors.mainBtn};
+  font-size: 18px;
+  line-height: 27px;
+
+  border: 1px solid ${props => props.theme.colors.cancelBtnColor};
+  border-radius: ${props => props.theme.radii[2]}px;
+
+  color: ${props => props.theme.colors.cancelBtnColor};
+  background-color: ${props => props.theme.colors.mainWhite};
 
   cursor: pointer;
 
   box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
 
   @media screen and (max-width: 479px) {
-    width: 200px;
+    width: 100%;
   }
 
   @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {

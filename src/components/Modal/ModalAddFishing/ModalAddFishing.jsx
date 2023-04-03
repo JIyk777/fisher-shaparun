@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
 
 import ModalUniversal from '../ModalUniversal';
+import AddFishingForm from 'components/AddFishingForm/AddFishingForm';
 
 import {
   ModalContainer,
@@ -42,8 +43,9 @@ const ModalAddFishing = () => {
     <ModalUniversal onClose={handleCloseModal} onClick={handleBackdropClick}>
       <ModalContainer>
         <ModalTitle>Add fishing</ModalTitle>
+        <AddFishingForm onClick={handleCloseModal} />
         <CloseModalBtn type="button" onClick={handleCloseModal}>
-          Cancel
+          CANCEL
         </CloseModalBtn>
       </ModalContainer>
     </ModalUniversal>
