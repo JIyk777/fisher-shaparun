@@ -1,11 +1,16 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
+
 import { BsCalendar3 } from 'react-icons/bs';
 import { RiScales2Line } from 'react-icons/ri';
 import { SiCurl } from 'react-icons/si';
 
-// import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { modalSelectors } from 'redux/modal/modalSelectors';
+import { addNewFishing } from 'redux/postsStore/postsSlice';
 
 import { AddBtn, FormLabel, IconBox } from './AddFishingForm.styled';
 
@@ -70,14 +75,20 @@ const schema = yup.object().shape({
 });
 
 const AddFishingForm = p => {
-  //   const { onClick } = p;
+  const riverId = useSelector(modalSelectors.getRiverId);
+  const { onClick } = p;
 
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
+    dispatch(
+      addNewFishing({
+        riverId,
+        newFishing: { id: uuidv4(), ...values, weight: Number(values.weight) },
+      })
+    );
     resetForm();
-    // dispatch();
-    // onClick();
+
+    onClick();
     return;
   };
 

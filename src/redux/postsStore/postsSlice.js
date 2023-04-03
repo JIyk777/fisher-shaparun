@@ -208,6 +208,18 @@ export const postsSlice = createSlice({
     toggle(state, action) {
       state.isLoading = action.payload;
     },
+    addNewFishing(state, action) {
+      console.log(action.payload);
+      const index = state.posts.findIndex(
+        elem => elem.id === action.payload.riverId
+      );
+      console.log(index);
+
+      state.posts[index].fishing = [
+        ...state.posts[index].fishing,
+        action.payload.newFishing,
+      ];
+    },
   },
 });
 
@@ -222,4 +234,4 @@ export const persistedPostsReducer = persistReducer(
 );
 
 export const postsReducer = postsSlice.reducer;
-export const { toggle } = postsSlice.actions;
+export const { toggle, addNewFishing } = postsSlice.actions;

@@ -30,8 +30,6 @@ export const ModalContent = styled.div`
   padding: ${props => props.theme.space[5]}px
     ${props => props.theme.space[10]}px;
 
-  border-radius: ${props => props.theme.radii[2]}px;
-
   background: #ffffff;
 
   @media screen and (max-width: 479px) {
@@ -39,6 +37,7 @@ export const ModalContent = styled.div`
     height: 100%;
   }
   @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
+    border-radius: ${props => props.theme.radii[2]}px;
     width: 480px;
   }
   @media screen and (min-width: ${props => props.theme.breakpoints[1]}px) {

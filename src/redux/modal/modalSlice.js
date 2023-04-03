@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+  riverId: '',
   showModalAddFishing: false,
 };
 
@@ -9,7 +10,8 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     toggleShowModalAddFishing(state, action) {
-      state.showModalAddFishing = action.payload;
+      state.showModalAddFishing = action.payload.showModal;
+      state.riverId = action.payload.riverId;
     },
   },
 });

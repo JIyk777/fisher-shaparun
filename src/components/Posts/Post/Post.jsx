@@ -15,12 +15,17 @@ import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
 import { BsPlus } from 'react-icons/bs';
 
 const Post = props => {
-  const { name, location, picture, fishing, fishSpecies } = props.post;
+  const { id, name, location, picture, fishing, fishSpecies } = props.post;
 
   const dispatch = useDispatch();
 
-  const handleAddBtn = () => {
-    dispatch(toggleShowModalAddFishing(true));
+  const handleAddBtn = id => {
+    dispatch(
+      toggleShowModalAddFishing({
+        showModal: true,
+        riverId: id,
+      })
+    );
   };
   return (
     <PostContainer>
@@ -37,7 +42,7 @@ const Post = props => {
         <PostItem>
           <PostItemName>Total Fishing:</PostItemName>
           <PostItemValue>{fishing.length}</PostItemValue>
-          <AddFishingBtn onClick={handleAddBtn}>
+          <AddFishingBtn onClick={() => handleAddBtn(id)}>
             <BsPlus color="#FFFFFF" size="18" />
           </AddFishingBtn>
         </PostItem>
