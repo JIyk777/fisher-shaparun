@@ -35,7 +35,7 @@ export const PostsContainer = styled.div`
     margin-top: ${props => props.theme.space[1]}px;
     margin-left: ${props => props.theme.space[10]}px;
 
-    height: 775px;
+    max-height: 775px;
 
     overflow-y: auto;
     overflow-x: hidden;
