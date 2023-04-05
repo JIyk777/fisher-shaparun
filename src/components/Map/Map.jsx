@@ -11,7 +11,7 @@ const NewMap = () => {
   const isTablet = useMediaQuery({ minWidth: 768 });
 
   const location = useSelector(modalSelectors.getLocation);
-  const { latitude, longitude } = location;
+  const { latitude, longitude, cityName, regionName } = location;
   console.log(location);
   return (
     <MapContainer
@@ -33,7 +33,7 @@ const NewMap = () => {
       />
       <Marker position={[latitude, longitude]}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          {cityName}, {regionName}
         </Popup>
       </Marker>
     </MapContainer>
