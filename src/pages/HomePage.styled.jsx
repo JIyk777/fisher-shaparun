@@ -18,9 +18,18 @@ export const Container = styled.div`
 `;
 export const HeaderSection = styled.div`
   background-color: ${props => props.theme.colors.mainWhite};
+
+  @media screen and (max-width: 479px) {
+    position: fixed;
+    width: 100%;
+  }
 `;
 export const PostsSection = styled.div`
   padding-top: ${props => props.theme.space[3]}px;
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    padding-top: ${props => props.theme.space[17]}px;
+  }
 `;
 
 export const AddNewPondBtn = styled.button`

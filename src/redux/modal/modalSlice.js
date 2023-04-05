@@ -2,8 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   riverId: '',
+  location: {},
   showModalAddFishing: false,
   showModalAddPond: false,
+  showModalMap: false,
 };
 
 const modalSlice = createSlice({
@@ -17,9 +19,17 @@ const modalSlice = createSlice({
     toggleShowModalAddPond(state, action) {
       state.showModalAddPond = action.payload;
     },
+    toggleShowModalMap(state, action) {
+      console.log(action.payload);
+      state.showModalMap = action.payload.showModal;
+      state.location = { ...action.payload.location.location };
+    },
   },
 });
 
 export const modalReducer = modalSlice.reducer;
-export const { toggleShowModalAddFishing, toggleShowModalAddPond } =
-  modalSlice.actions;
+export const {
+  toggleShowModalAddFishing,
+  toggleShowModalAddPond,
+  toggleShowModalMap,
+} = modalSlice.actions;

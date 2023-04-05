@@ -8,11 +8,16 @@ import {
   PostItemName,
   PostItemValue,
   AddFishingBtn,
+  LocationBtn,
 } from './Post.styled';
 
-import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
+import {
+  toggleShowModalAddFishing,
+  toggleShowModalMap,
+} from 'redux/modal/modalSlice';
 
 import { BsPlus } from 'react-icons/bs';
+import { MdLocationOn } from 'react-icons/md';
 
 const Post = props => {
   const { id, name, location, picture, fishing, fishSpecies } = props.post;
@@ -27,6 +32,14 @@ const Post = props => {
       })
     );
   };
+  const handleLocationBtn = location => {
+    dispatch(
+      toggleShowModalMap({
+        showModal: true,
+        location: { location },
+      })
+    );
+  };
   return (
     <PostContainer>
       <PostImg src={picture} alt="river" />
@@ -34,7 +47,13 @@ const Post = props => {
         <PostItem>
           <PostItemName>Location:</PostItemName>
           <PostItemValue>
-            {location.cityName}, {location.regionName}
+            <LocationBtn
+              type="button"
+              onClick={() => handleLocationBtn(location)}
+            >
+              {location.cityName}, {location.regionName}
+              <MdLocationOn size="18" />
+            </LocationBtn>
           </PostItemValue>
         </PostItem>
         <PostItem>

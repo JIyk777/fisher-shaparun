@@ -3,7 +3,7 @@ import { Nav, NavItem, NavLink, NavText } from './MainNav.styled';
 import MenuIcon from 'components/MenuIcon/MenuIcon';
 
 import { MdHome } from 'react-icons/md';
-import { ImStatsDots } from 'react-icons/im';
+// import { ImStatsDots } from 'react-icons/im';
 
 import { useMediaQuery } from 'react-responsive';
 
@@ -29,7 +29,7 @@ const MainNav = () => {
           </NavLink>
         )}
       </NavItem>
-      <NavItem>
+      {/* <NavItem>
         {isMobile && (
           <NavLink href="">
             <MenuIcon width={1} height={1}>
@@ -45,7 +45,7 @@ const MainNav = () => {
             <NavText>Statistics</NavText>
           </NavLink>
         )}
-      </NavItem>
+      </NavItem> */}
     </Nav>
   );
 };

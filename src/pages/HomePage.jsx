@@ -9,6 +9,7 @@ import Posts from 'components/Posts/Posts';
 import Box from 'components/Box';
 import ModalAddFishing from 'components/Modal/ModalAddFishing/ModalAddFishing';
 import ModalAddPond from 'components/Modal/ModalAddPond/ModalAddPond';
+import ModalMap from 'components/Modal/ModalMap/ModalMap';
 import { modalSelectors } from 'redux/modal/modalSelectors';
 
 import { HeaderSection, PostsSection, Container } from './HomePage.styled';
@@ -20,6 +21,7 @@ const HomePage = () => {
 
   const showModalFishing = useSelector(modalSelectors.showModalAddFishing);
   const showModalPond = useSelector(modalSelectors.showModalAddPond);
+  const showModalMap = useSelector(modalSelectors.showModalMap);
   return (
     <Box height="100%">
       <HeaderSection>
@@ -50,6 +52,7 @@ const HomePage = () => {
 
       {showModalFishing && <ModalAddFishing />}
       {showModalPond && <ModalAddPond />}
+      {showModalMap && <ModalMap />}
     </Box>
   );
 };

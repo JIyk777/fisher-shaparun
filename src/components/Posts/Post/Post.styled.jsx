@@ -87,3 +87,24 @@ export const AddFishingBtn = styled.button`
     outline: 0;
   }
 `;
+
+export const LocationBtn = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: ${props => props.theme.colors.secondTextColor};
+  background-color: #ffffff;
+  border: 0;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: ${props => props.theme.colors.mainAccentColor};
+  }
+  &:hover svg,
+  &:focus svg {
+    color: ${props => props.theme.colors.mainAccentColor};
+  }
+  svg {
+    color: ${props => props.theme.colors.mainBtn};
+  }
+`;
