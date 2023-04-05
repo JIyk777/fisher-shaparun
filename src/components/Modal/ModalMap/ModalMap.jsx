@@ -1,9 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import {
-  toggleShowModalAddPond,
-  toggleShowModalMap,
-} from 'redux/modal/modalSlice';
+import { toggleShowModalMap } from 'redux/modal/modalSlice';
 
 import ModalUniversal from '../ModalUniversal';
 import NewMap from 'components/Map/Map';
