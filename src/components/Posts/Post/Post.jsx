@@ -76,9 +76,11 @@ const Post = props => {
         <PostItem>
           <PostItemName>Total Weight:</PostItemName>
           <PostItemValue>
-            {fishing.reduce((acc, item) => {
-              return acc + item.weight;
-            }, 0)}
+            {fishing
+              .reduce((acc, item) => {
+                return acc + item.weight;
+              }, 0)
+              .toFixed(2)}
           </PostItemValue>
         </PostItem>
       </PostList>

@@ -119,7 +119,7 @@ const AddPondForm = p => {
           <IconBox>
             <GiWaterSplash color="#24CCA7" size="18" />
           </IconBox>
-          <Input type="text" placeholder="Please enter pond name" name="name" />
+          <Input type="text" placeholder=" Pond name" name="name" />
           <ErrorText name="name" component="div"></ErrorText>
         </FormLabel>
         <FormLabel>
@@ -128,7 +128,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Please enter city name"
+            placeholder="City name"
             name="cityName"
           />
           <ErrorText name="cityName" component="div"></ErrorText>
@@ -140,7 +140,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Please enter region name"
+            placeholder="Region name"
             name="regionName"
           />
           <ErrorText name="regionName" component="div"></ErrorText>
@@ -151,7 +151,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Please enter latitude"
+            placeholder="Latitude"
             name="latitude"
           />
           <ErrorText name="latitude" component="div"></ErrorText>
@@ -162,7 +162,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Please enter longitude "
+            placeholder="Longitude "
             name="longitude"
           />
           <ErrorText name="longitude" component="div"></ErrorText>
@@ -173,7 +173,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="url"
-            placeholder="Enter URL https://example.com"
+            placeholder=" URL https://example.com"
             name="image"
           />
           <ErrorText name="image" component="div"></ErrorText>

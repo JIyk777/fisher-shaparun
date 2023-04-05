@@ -36,6 +36,8 @@ const Input = styled(Field)`
   line-height: ${props => props.theme.lineHeights[1]}px;
   text-align: center;
 
+  color: #bdbdbd;
+
   border: 0;
   border-bottom: 1px solid ${props => props.theme.colors.borderColor};
 
@@ -105,11 +107,7 @@ const AddFishingForm = p => {
           <IconBox>
             <BsCalendar3 color="#24CCA7" size="18" />
           </IconBox>
-          <Input
-            type="text"
-            placeholder="Please enter date 01.02.2023"
-            name="data"
-          />
+          <Input type="date" placeholder="Date 01.02.2023" name="data" />
           <ErrorText name="data" component="div"></ErrorText>
         </FormLabel>
         <FormLabel>
@@ -117,9 +115,10 @@ const AddFishingForm = p => {
             <RiScales2Line color="#24CCA7" size="18" />
           </IconBox>
           <Input
-            type="text"
-            placeholder="Please enter weight 0.01 to 100"
+            type="number"
+            placeholder="Weight 0.01 to 100"
             name="weight"
+            step="0.1"
           />
           <ErrorText name="weight" component="div"></ErrorText>
         </FormLabel>
@@ -129,7 +128,7 @@ const AddFishingForm = p => {
           </IconBox>
           <Input
             type="url"
-            placeholder="Enter URL https://example.com"
+            placeholder=" URL https://example.com"
             name="image"
           />
           <ErrorText name="image" component="div"></ErrorText>
