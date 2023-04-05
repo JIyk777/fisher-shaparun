@@ -61,7 +61,7 @@ export const AddNewPondBtn = styled.button`
 
   cursor: pointer;
 
-  box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
+  box-shadow: 0px 0px 15px -4px ${props => props.theme.colors.btnShadow};
 
   @media screen and (max-width: 479px) {
     width: 100%;

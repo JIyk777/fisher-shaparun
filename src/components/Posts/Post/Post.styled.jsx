@@ -7,6 +7,8 @@ export const PostContainer = styled.div`
 
   background-color: ${props => props.theme.colors.mainWhite};
 
+  box-shadow: 0px 0px 15px -7px #4a893c;
+
   @media screen and (min-width: ${props => props.theme.breakpoints[1]}px) {
     width: calc((100% - 16px) / 2);
   }

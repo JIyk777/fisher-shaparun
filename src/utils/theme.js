@@ -9,7 +9,7 @@ const theme = {
 
     menuBtnColor: '#6E78E8',
     mainBtn: '#24CCA7',
-    btnShadow: 'rgba(36, 204, 167, 0.5)',
+    btnShadow: 'rgba(36, 204, 167)',
     cancelBtnColor: '#4A56E2',
 
     backDrop: 'rgba(0, 0, 0, 0.25)',
