@@ -53,7 +53,7 @@ The following tools were used to develop this project:
 - HTML/CSS;
 - JavaScript;
 - React;
-- Redux toolkit;
+- Redux;
 - Redux persist;
 - Styled-system and Styled-component;
 - Library Leaflet;
