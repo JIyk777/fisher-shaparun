@@ -3,6 +3,8 @@ import * as yup from 'yup';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
+import { useTranslation } from 'react-i18next';
+
 import { TbWorldLongitude, TbWorldLatitude } from 'react-icons/tb';
 import { MdLocationCity } from 'react-icons/md';
 import { GiWaterSplash } from 'react-icons/gi';
@@ -87,7 +89,10 @@ const schema = yup.object().shape({
 const AddPondForm = p => {
   const { onClick } = p;
 
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
+
   const handleSubmit = (values, { resetForm }) => {
     const newPond = {
       id: uuidv4(),
@@ -119,7 +124,11 @@ const AddPondForm = p => {
           <IconBox>
             <GiWaterSplash color="#24CCA7" size="18" />
           </IconBox>
-          <Input type="text" placeholder=" Pond name" name="name" />
+          <Input
+            type="text"
+            placeholder={t('description.inputPondNamePlaceholder')}
+            name="name"
+          />
           <ErrorText name="name" component="div"></ErrorText>
         </FormLabel>
         <FormLabel>
@@ -128,7 +137,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="City name"
+            placeholder={t('description.inputCityNamePlaceholder')}
             name="cityName"
           />
           <ErrorText name="cityName" component="div"></ErrorText>
@@ -140,7 +149,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Region name"
+            placeholder={t('description.inputRegionNamePlaceholder')}
             name="regionName"
           />
           <ErrorText name="regionName" component="div"></ErrorText>
@@ -151,7 +160,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Latitude"
+            placeholder={t('description.inputLatitudePlaceholder')}
             name="latitude"
           />
           <ErrorText name="latitude" component="div"></ErrorText>
@@ -162,7 +171,7 @@ const AddPondForm = p => {
           </IconBox>
           <Input
             type="text"
-            placeholder="Longitude "
+            placeholder={t('description.inputLongitudePlaceholder')}
             name="longitude"
           />
           <ErrorText name="longitude" component="div"></ErrorText>
@@ -171,14 +180,10 @@ const AddPondForm = p => {
           <IconBox>
             <SiCurl color="#24CCA7" size="18" />
           </IconBox>
-          <Input
-            type="url"
-            placeholder=" URL https://example.com"
-            name="image"
-          />
+          <Input type="url" placeholder="  https://example.com" name="image" />
           <ErrorText name="image" component="div"></ErrorText>
         </FormLabel>
-        <AddBtn type="submit">ADD POND</AddBtn>
+        <AddBtn type="submit">{t('description.btnAddFishing')}</AddBtn>
       </AddForm>
     </Formik>
   );

@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
 
+import { useTranslation } from 'react-i18next';
+
+import { toggleShowModalAddFishing } from 'redux/modal/modalSlice';
 import ModalUniversal from '../ModalUniversal';
 import AddFishingForm from 'components/AddFishingForm/AddFishingForm';
 
@@ -13,6 +15,7 @@ import {
 
 const ModalAddFishing = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleCloseModal = () => {
     dispatch(toggleShowModalAddFishing(false));
@@ -42,10 +45,10 @@ const ModalAddFishing = () => {
   return (
     <ModalUniversal onClose={handleCloseModal} onClick={handleBackdropClick}>
       <ModalContainer>
-        <ModalTitle>Add fishing</ModalTitle>
+        <ModalTitle>{t('description.modalAddFishingTitle')}</ModalTitle>
         <AddFishingForm onClick={handleCloseModal} />
         <CloseModalBtn type="button" onClick={handleCloseModal}>
-          CANCEL
+          {t('description.modalCloseBtn')}
         </CloseModalBtn>
       </ModalContainer>
     </ModalUniversal>

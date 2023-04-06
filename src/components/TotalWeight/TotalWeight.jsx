@@ -1,6 +1,8 @@
 import { useMediaQuery } from 'react-responsive';
 import { useSelector } from 'react-redux';
 
+import { useTranslation } from 'react-i18next';
+
 import Box from 'components/Box';
 import totalWeight from 'utils/totalWeight';
 
@@ -15,6 +17,8 @@ const TotalWeight = () => {
 
   const allPosts = useSelector(postsSelectors.getPosts);
 
+  const { t } = useTranslation();
+
   return (
     <Box
       mt={3}
@@ -25,8 +29,10 @@ const TotalWeight = () => {
       bg="mainWhite"
       borderRadius={2}
     >
-      <Title>Your Total Weight</Title>
-      <Sum>{totalWeight(allPosts)} kg</Sum>
+      <Title>{t('description.totalWeightTitle')}</Title>
+      <Sum>
+        {totalWeight(allPosts)} {t('description.totalValue')}
+      </Sum>
     </Box>
   );
 };

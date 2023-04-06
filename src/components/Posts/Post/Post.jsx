@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 
+import { useTranslation } from 'react-i18next';
+
 import {
   PostContainer,
   PostImg,
@@ -21,6 +23,8 @@ import { MdLocationOn } from 'react-icons/md';
 
 const Post = props => {
   const { id, name, location, picture, fishing, fishSpecies } = props.post;
+
+  const { t } = useTranslation();
 
   const dispatch = useDispatch();
 
@@ -45,7 +49,7 @@ const Post = props => {
       <PostImg src={picture} alt="river" />
       <PostList>
         <PostItem>
-          <PostItemName>Location:</PostItemName>
+          <PostItemName>{t('description.postLocation')}:</PostItemName>
           <PostItemValue>
             <LocationBtn
               type="button"
@@ -57,24 +61,24 @@ const Post = props => {
           </PostItemValue>
         </PostItem>
         <PostItem>
-          <PostItemName>Name:</PostItemName>
+          <PostItemName>{t('description.postName')}:</PostItemName>
           <PostItemValue>{name}</PostItemValue>
         </PostItem>
         <PostItem>
-          <PostItemName>Total Fishing:</PostItemName>
+          <PostItemName>{t('description.postTotalFishing')}:</PostItemName>
           <PostItemValue>{fishing.length}</PostItemValue>
           <AddFishingBtn onClick={() => handleAddBtn(id)}>
             <BsPlus color="#FFFFFF" size="18" />
           </AddFishingBtn>
         </PostItem>
         <PostItem>
-          <PostItemName>Fish species:</PostItemName>
+          <PostItemName>{t('description.postFishSpecies')}:</PostItemName>
           <PostItemValue>
             {fishSpecies.map(item => item).join(', ')}
           </PostItemValue>
         </PostItem>
         <PostItem>
-          <PostItemName>Total Weight:</PostItemName>
+          <PostItemName>{t('description.postTotalWeight')}:</PostItemName>
           <PostItemValue>
             {fishing
               .reduce((acc, item) => {

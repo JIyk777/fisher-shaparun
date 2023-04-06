@@ -1,5 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+
+import { useTranslation } from 'react-i18next';
+
 import { toggleShowModalAddPond } from 'redux/modal/modalSlice';
 
 import ModalUniversal from '../ModalUniversal';
@@ -13,6 +16,7 @@ import {
 
 const ModalAddPond = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleCloseModal = () => {
     dispatch(toggleShowModalAddPond(false));
@@ -42,10 +46,10 @@ const ModalAddPond = () => {
   return (
     <ModalUniversal onClose={handleCloseModal} onClick={handleBackdropClick}>
       <ModalContainer>
-        <ModalTitle>Add new pond</ModalTitle>
+        <ModalTitle>{t('description.modalAddPondTitle')}</ModalTitle>
         <AddPondForm onClick={handleCloseModal} />
         <CloseModalBtn type="button" onClick={handleCloseModal}>
-          CANCEL
+          {t('description.modalCloseBtn')}
         </CloseModalBtn>
       </ModalContainer>
     </ModalUniversal>

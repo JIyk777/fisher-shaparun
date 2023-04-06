@@ -3,6 +3,8 @@ import * as yup from 'yup';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
+import { useTranslation } from 'react-i18next';
+
 import { BsCalendar3 } from 'react-icons/bs';
 import { RiScales2Line } from 'react-icons/ri';
 import { SiCurl } from 'react-icons/si';
@@ -80,6 +82,9 @@ const schema = yup.object().shape({
 
 const AddFishingForm = p => {
   const riverId = useSelector(modalSelectors.getRiverId);
+
+  const { t } = useTranslation();
+
   const { onClick } = p;
 
   const dispatch = useDispatch();
@@ -107,7 +112,7 @@ const AddFishingForm = p => {
           <IconBox>
             <BsCalendar3 color="#24CCA7" size="18" />
           </IconBox>
-          <Input type="date" placeholder="Date 01.02.2023" name="data" />
+          <Input type="date" name="data" />
           <ErrorText name="data" component="div"></ErrorText>
         </FormLabel>
         <FormLabel>
@@ -116,7 +121,7 @@ const AddFishingForm = p => {
           </IconBox>
           <Input
             type="number"
-            placeholder="Weight 0.01 to 100"
+            placeholder={t('description.inputWeightPlaceholder')}
             name="weight"
             step="0.1"
           />
@@ -126,14 +131,10 @@ const AddFishingForm = p => {
           <IconBox>
             <SiCurl color="#24CCA7" size="18" />
           </IconBox>
-          <Input
-            type="url"
-            placeholder=" URL https://example.com"
-            name="image"
-          />
+          <Input type="url" placeholder="  https://example.com" name="image" />
           <ErrorText name="image" component="div"></ErrorText>
         </FormLabel>
-        <AddBtn type="submit">ADD FISHING</AddBtn>
+        <AddBtn type="submit">{t('description.btnAddFishing')}</AddBtn>
       </AddForm>
     </Formik>
   );

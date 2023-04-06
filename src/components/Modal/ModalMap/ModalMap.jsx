@@ -1,13 +1,16 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { toggleShowModalMap } from 'redux/modal/modalSlice';
 
+import { useTranslation } from 'react-i18next';
+
+import { toggleShowModalMap } from 'redux/modal/modalSlice';
 import ModalUniversal from '../ModalUniversal';
 import NewMap from 'components/Map/Map';
 
 import { ModalContainer, CloseModalBtn, ModalTitle } from './ModalMap.styled';
 
 const ModalMap = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
@@ -43,10 +46,10 @@ const ModalMap = () => {
   return (
     <ModalUniversal onClose={handleCloseModal} onClick={handleBackdropClick}>
       <ModalContainer>
-        <ModalTitle>Pond location</ModalTitle>
+        <ModalTitle>{t('description.modalMapTitle')}</ModalTitle>
         <NewMap></NewMap>
         <CloseModalBtn type="button" onClick={handleCloseModal}>
-          CANCEL
+          {t('description.modalCloseBtn')}
         </CloseModalBtn>
       </ModalContainer>
     </ModalUniversal>

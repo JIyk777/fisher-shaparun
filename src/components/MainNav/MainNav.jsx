@@ -5,11 +5,15 @@ import MenuIcon from 'components/MenuIcon/MenuIcon';
 import { MdHome } from 'react-icons/md';
 // import { ImStatsDots } from 'react-icons/im';
 
+import { useTranslation } from 'react-i18next';
+
 import { useMediaQuery } from 'react-responsive';
 
 const MainNav = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768 });
+
+  const { t } = useTranslation();
   return (
     <Nav>
       <NavItem>
@@ -25,7 +29,7 @@ const MainNav = () => {
             <MenuIcon width={0} height={0} borderRadius={0}>
               <MdHome color="#FFFFFF" size="16px" />
             </MenuIcon>
-            <NavText>Home</NavText>
+            <NavText>{t('description.navHome')}</NavText>
           </NavLink>
         )}
       </NavItem>

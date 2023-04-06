@@ -7,6 +7,7 @@ import './index.css';
 import App from './App';
 import { ThemeProvider } from 'styled-components';
 import theme from 'utils/theme';
+import './utils/i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
