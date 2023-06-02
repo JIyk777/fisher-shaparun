@@ -28,6 +28,7 @@ export const LangBtnEn = styled.button`
     props.colorValue
       ? props.theme.colors.mainBtn
       : props.theme.colors.mainWhite};
+  
   &:hover,
   &:focus {
     border: 1px solid ${props => props.theme.colors.mainBtn};
@@ -35,6 +36,7 @@ export const LangBtnEn = styled.button`
 
     color: ${props => props.theme.colors.mainWhite};
     background-color: ${props => props.theme.colors.mainBtn};
+    cursor:pointer;
   }
 `;
 export const LangBtnUk = styled.button`
@@ -63,5 +65,6 @@ export const LangBtnUk = styled.button`
 
     color: ${props => props.theme.colors.mainWhite};
     background-color: ${props => props.theme.colors.mainBtn};
+    cursor:pointer;
   }
 `;
