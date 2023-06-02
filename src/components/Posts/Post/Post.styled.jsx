@@ -81,12 +81,13 @@ export const AddFishingBtn = styled.button`
   border-radius: 100%;
 
   cursor: pointer;
-
-  box-shadow: 0px 3px 6px ${props => props.theme.colors.btnShadow};
+  
+  transform: scale(1);
 
   &:hover,
   &:focus {
     outline: 0;
+    transform: scale(1.2);
   }
 `;
 

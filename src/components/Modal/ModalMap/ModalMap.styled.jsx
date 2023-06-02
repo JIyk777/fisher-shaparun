@@ -29,8 +29,12 @@ export const CloseModalBtn = styled.button`
   background-color: ${props => props.theme.colors.mainWhite};
 
   cursor: pointer;
-
-  box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
+  transform: scale(1);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  
 
   @media screen and (max-width: 479px) {
     width: 100%;

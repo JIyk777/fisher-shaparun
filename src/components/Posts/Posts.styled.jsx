@@ -22,6 +22,7 @@ export const PostsContainer = styled.div`
     border-radius: 15px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   }
+  
 
   @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
   }
@@ -62,6 +63,12 @@ export const AddNewPondBtn = styled.button`
   cursor: pointer;
 
   box-shadow: 0px 0px 15px -4px ${props => props.theme.colors.btnShadow};
+  
+  transform: scale(1);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 
   @media screen and (max-width: 479px) {
     width: 100%;

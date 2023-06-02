@@ -99,7 +99,7 @@ export const CloseModalBtn = styled.button`
     transform: scale(0.9);
   }
 
-  box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
+  box-shadow: 1px 1px 14px ${props => props.theme.colors.btnShadow};
 
   @media screen and (max-width: 479px) {
     display: none;

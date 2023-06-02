@@ -17,8 +17,13 @@ export const AddBtn = styled.button`
   background-color: ${props => props.theme.colors.mainBtn};
 
   cursor: pointer;
+  
+  transform: scale(1);
 
-  box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 
   @media screen and (max-width: 479px) {
     width: 100%;

@@ -45,6 +45,7 @@ const Input = styled(Field)`
     text-align: center;
     font-size: ${props => props.theme.fontSizes[1]}px;
     line-height: ${props => props.theme.lineHeights[0]}px;
+    color: rgb(166, 166, 166);
   }
 
   &:hover,
