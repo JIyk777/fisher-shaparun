@@ -52,7 +52,42 @@ export const ErrorText = styled(ErrorMessage)`
   font-size: ${props => props.theme.fontSizes[0]}px;
   line-height: ${props => props.theme.lineHeights[1]}px;
 `;
-export const AddBtn = styled.button`
+export const LoginBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: ${props => props.theme.space[3]}px 0;
+  margin-top: ${props => props.theme.space[5]}px;;
+
+  font-size: 18px;
+  line-height: 27px;
+
+  border: 1px solid ${props => props.theme.colors.cancelBtnColor};
+  border-radius: ${props => props.theme.radii[2]}px;
+
+  color: ${props => props.theme.colors.cancelBtnColor};
+  background-color: ${props => props.theme.colors.mainWhite};
+
+  box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
+
+  cursor: pointer;
+
+  transform: scale(1);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: ${props => props.theme.breakpoints[0]}px) {
+    width: 240px;
+  }
+`;
+export const RegisterBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +106,12 @@ export const AddBtn = styled.button`
   cursor: pointer;
 
   box-shadow: 0px 6px 12px ${props => props.theme.colors.btnShadow};
+
+  transform: scale(1);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 
   @media screen and (max-width: 479px) {
     width: 100%;
@@ -94,5 +135,5 @@ export const FormLabel = styled.label`
 export const IconBox = styled.span`
   position: absolute;
   top: 7px;
-  left: -8px;
+  left: 10px;
 `;

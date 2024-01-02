@@ -1,4 +1,4 @@
-import { AddBtn, FormLabel, IconBox, RegistrationForm, Input, ErrorText } from './RegisterForm.styled';
+import { RegisterBtn, LoginBtn, FormLabel, IconBox, RegistrationForm, Input, ErrorText } from './RegisterForm.styled';
 
 import { Formik } from 'formik';
 import * as yup from 'yup';
@@ -8,6 +8,8 @@ import { IoMdKey } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
 import Logo from '../Logo/Logo';
+import { useTranslation } from 'react-i18next';
+import Box from '../Box';
 
 const initialValues = {
   firstName: '',
@@ -21,6 +23,7 @@ const schema = yup.object().shape({
   email: yup.string().email().required(),
 });
 const RegisterForm = () => {
+  const { t } = useTranslation();
   const handleSubmit = (values, { resetForm }) => {
     console.log(values)
     resetForm();
@@ -37,7 +40,7 @@ const RegisterForm = () => {
           <IconBox>
             <FaRegSmile color='#24CCA7' size='18' />
           </IconBox>
-          <Input type='text' name='firstName' placeholder='First Name'/>
+          <Input type='text' name='firstName' placeholder={t('description.registerInputFirstName')}/>
           <ErrorText name='firstName' component='div'></ErrorText>
         </FormLabel>
         <FormLabel>
@@ -46,7 +49,7 @@ const RegisterForm = () => {
           </IconBox>
           <Input
             type='text'
-            placeholder='Password'
+            placeholder={t('description.registerInputPassword')}
             name='password'
           />
           <ErrorText name='password' component='div'></ErrorText>
@@ -58,7 +61,10 @@ const RegisterForm = () => {
           <Input type='email' placeholder='https://example.com' name='email' />
           <ErrorText name='email' component='div'></ErrorText>
         </FormLabel>
-        <AddBtn type='submit'>Register</AddBtn>
+        <Box>
+          <RegisterBtn type='submit'>{t('description.registerBtn')}</RegisterBtn>
+          <LoginBtn type='submit'>{t('description.logInBtn')}</LoginBtn>
+        </Box>
       </RegistrationForm>
     </Formik>
   );
