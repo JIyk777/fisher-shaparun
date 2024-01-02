@@ -17,6 +17,11 @@ i18n
           description: {
             logoTitle: 'Fishing',
 
+            registerInputFirstName: 'First Name',
+            registerInputPassword: 'Password',
+            registerBtn: 'Register',
+            logInBtn:'Login',
+
             inputWeightPlaceholder: 'Weight 0.01 to 100',
             inputPondNamePlaceholder: 'Pond name',
             inputCityNamePlaceholder: 'City name',
@@ -48,6 +53,11 @@ i18n
         translation: {
           description: {
             logoTitle: 'Рибалка',
+
+            registerInputFirstName: "Ім'я",
+            registerInputPassword: 'Пароль',
+            registerBtn: 'Реєстрація',
+            logInBtn:'Увійти',
 
             inputWeightPlaceholder: 'Вага 0.01 to 100',
             inputPondNamePlaceholder: 'Назва водойми',
