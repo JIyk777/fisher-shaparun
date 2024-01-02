@@ -80,12 +80,12 @@ const schema = yup.object().shape({
   image: yup.string().url().required(),
 });
 
-const AddFishingForm = p => {
+const AddFishingForm = props => {
   const riverId = useSelector(modalSelectors.getRiverId);
 
   const { t } = useTranslation();
 
-  const { onClick } = p;
+  const { onClick } = props;
 
   const dispatch = useDispatch();
   const handleSubmit = (values, { resetForm }) => {
@@ -98,7 +98,6 @@ const AddFishingForm = p => {
     resetForm();
 
     onClick();
-    return;
   };
 
   return (
