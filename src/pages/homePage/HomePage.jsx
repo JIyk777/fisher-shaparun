@@ -1,6 +1,7 @@
 import Header from 'components/Header/Header';
 import MainNav from 'components/MainNav/MainNav';
 import TotalWeight from 'components/TotalWeight/TotalWeight';
+import Container from 'components/Container/Container'
 
 import { useMediaQuery } from 'react-responsive';
 import { useSelector } from 'react-redux';
@@ -12,7 +13,7 @@ import ModalAddPond from 'components/Modal/ModalAddPond/ModalAddPond';
 import ModalMap from 'components/Modal/ModalMap/ModalMap';
 import { modalSelectors } from 'redux/modal/modalSelectors';
 
-import { HeaderSection, PostsSection, Container } from './HomePage.styled';
+import { HeaderSection, PostsSection } from './HomePage.styled';
 
 const HomePage = () => {
   const isMobile = useMediaQuery({ minWidth: 320 });
