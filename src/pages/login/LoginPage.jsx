@@ -1,4 +1,4 @@
-import { LoginSection, RegisterSection } from './LoginPage.styled';
+import { LoginSection } from './LoginPage.styled';
 import authImage from 'assets/images/authImage.png';
 import Box from 'components/Box'
 import Container from '../../components/Container/Container';

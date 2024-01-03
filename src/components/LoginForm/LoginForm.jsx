@@ -3,7 +3,6 @@ import { RegisterBtn, LoginBtn, FormLabel, IconBox, LogForm, Input, ErrorText } 
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
-import { FaRegSmile } from "react-icons/fa";
 import { IoMdKey } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
