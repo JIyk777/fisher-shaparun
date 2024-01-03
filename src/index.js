@@ -13,14 +13,14 @@ import './utils/i18n';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <BrowserRouter basename="/fisher-shaparun">
-    <ThemeProvider theme={theme}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter basename='/fisher-shaparun'>
           <App />
-        </PersistGate>
-      </Provider>
-    </ThemeProvider>
-  </BrowserRouter>,
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
+  </ThemeProvider>,
   // </React.StrictMode>
 );
