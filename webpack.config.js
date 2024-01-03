@@ -1,7 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: `${__dirname}/src/index.js`,
+  entry: `${__dirname}/src/index.tsx`,
   output: {
     path: `${__dirname}/build`,
     publicPath: '/build/',
