@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fisher-shaparun/static/css/main.540f706f.css",
-    "main.js": "/fisher-shaparun/static/js/main.8cd306d6.js",
+    "main.js": "/fisher-shaparun/static/js/main.08b4ecf5.js",
     "static/js/319.846e22fd.chunk.js": "/fisher-shaparun/static/js/319.846e22fd.chunk.js",
     "static/js/249.4a982e16.chunk.js": "/fisher-shaparun/static/js/249.4a982e16.chunk.js",
     "static/js/100.3a620d34.chunk.js": "/fisher-shaparun/static/js/100.3a620d34.chunk.js",
@@ -12,7 +12,7 @@
     "static/media/authImage.png": "/fisher-shaparun/static/media/authImage.a3a5f5530b05b5eb4c43.png",
     "index.html": "/fisher-shaparun/index.html",
     "main.540f706f.css.map": "/fisher-shaparun/static/css/main.540f706f.css.map",
-    "main.8cd306d6.js.map": "/fisher-shaparun/static/js/main.8cd306d6.js.map",
+    "main.08b4ecf5.js.map": "/fisher-shaparun/static/js/main.08b4ecf5.js.map",
     "319.846e22fd.chunk.js.map": "/fisher-shaparun/static/js/319.846e22fd.chunk.js.map",
     "249.4a982e16.chunk.js.map": "/fisher-shaparun/static/js/249.4a982e16.chunk.js.map",
     "100.3a620d34.chunk.js.map": "/fisher-shaparun/static/js/100.3a620d34.chunk.js.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.540f706f.css",
-    "static/js/main.8cd306d6.js"
+    "static/js/main.08b4ecf5.js"
   ]
 }
