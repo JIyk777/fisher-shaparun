@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/fisher-shaparun/static/css/main.540f706f.css",
-    "main.js": "/fisher-shaparun/static/js/main.bdeed17c.js",
+    "main.js": "/fisher-shaparun/static/js/main.ebd2777b.js",
     "static/js/319.846e22fd.chunk.js": "/fisher-shaparun/static/js/319.846e22fd.chunk.js",
-    "static/js/249.13498ded.chunk.js": "/fisher-shaparun/static/js/249.13498ded.chunk.js",
+    "static/js/249.4a982e16.chunk.js": "/fisher-shaparun/static/js/249.4a982e16.chunk.js",
     "static/js/100.3a620d34.chunk.js": "/fisher-shaparun/static/js/100.3a620d34.chunk.js",
     "static/js/233.6e658ad2.chunk.js": "/fisher-shaparun/static/js/233.6e658ad2.chunk.js",
     "static/js/373.1d7f3c2e.chunk.js": "/fisher-shaparun/static/js/373.1d7f3c2e.chunk.js",
@@ -12,9 +12,9 @@
     "static/media/authImage.png": "/fisher-shaparun/static/media/authImage.a3a5f5530b05b5eb4c43.png",
     "index.html": "/fisher-shaparun/index.html",
     "main.540f706f.css.map": "/fisher-shaparun/static/css/main.540f706f.css.map",
-    "main.bdeed17c.js.map": "/fisher-shaparun/static/js/main.bdeed17c.js.map",
+    "main.ebd2777b.js.map": "/fisher-shaparun/static/js/main.ebd2777b.js.map",
     "319.846e22fd.chunk.js.map": "/fisher-shaparun/static/js/319.846e22fd.chunk.js.map",
-    "249.13498ded.chunk.js.map": "/fisher-shaparun/static/js/249.13498ded.chunk.js.map",
+    "249.4a982e16.chunk.js.map": "/fisher-shaparun/static/js/249.4a982e16.chunk.js.map",
     "100.3a620d34.chunk.js.map": "/fisher-shaparun/static/js/100.3a620d34.chunk.js.map",
     "233.6e658ad2.chunk.js.map": "/fisher-shaparun/static/js/233.6e658ad2.chunk.js.map",
     "373.1d7f3c2e.chunk.js.map": "/fisher-shaparun/static/js/373.1d7f3c2e.chunk.js.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.540f706f.css",
-    "static/js/main.bdeed17c.js"
+    "static/js/main.ebd2777b.js"
   ]
 }
