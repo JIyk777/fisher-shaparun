@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Navigate, useLocation } from 'react-router-dom';
 
@@ -9,11 +9,13 @@ export default function PrivateRoute({ redirectTo, children }) {
   const location = useLocation();
   const [isAuth, setIsAuth] = useState(false);
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setIsAuth(true)
-    }
-  });
+  useEffect(() =>{
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsAuth(true)
+      }
+    })
+  },[])
 
   return isAuth ? (
     children
