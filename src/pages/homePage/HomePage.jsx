@@ -5,7 +5,6 @@ import Container from 'components/Container/Container'
 
 import { useMediaQuery } from 'react-responsive';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 
 import Posts from 'components/Posts/Posts';
 import Box from 'components/Box';
@@ -17,7 +16,6 @@ import { modalSelectors } from 'redux/modal/modalSelectors';
 import { HeaderSection, PostsSection } from './HomePage.styled';
 
 const HomePage = () => {
-  const navigate = useNavigate();
 
   const isMobile = useMediaQuery({ minWidth: 320 });
   const isOnlyMobile = useMediaQuery({ maxWidth: 479 });
