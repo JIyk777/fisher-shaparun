@@ -30,7 +30,6 @@ const HomePage = () => {
     <Box height="100%">
       <HeaderSection>
         <Container>
-          <button onClick={() => navigate('/login')}>Login</button>
           <Header />
         </Container>
       </HeaderSection>
