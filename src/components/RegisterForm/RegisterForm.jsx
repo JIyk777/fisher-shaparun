@@ -1,4 +1,6 @@
 import { RegisterBtn, LoginBtn, FormLabel, IconBox, RegistrationForm, Input, ErrorText } from './RegisterForm.styled';
+import Logo from '../Logo/Logo';
+import Box from '../Box';
 
 import { Formik } from 'formik';
 import * as yup from 'yup';
@@ -6,10 +8,12 @@ import * as yup from 'yup';
 import { FaRegSmile } from "react-icons/fa";
 import { IoMdKey } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-
-import Logo from '../Logo/Logo';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Box from '../Box';
+import { auth } from '../../firebaseConfig';
+
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 const initialValues = {
   firstName: '',
@@ -23,9 +27,20 @@ const schema = yup.object().shape({
   email: yup.string().email().required(),
 });
 const RegisterForm = () => {
+  const navigate = useNavigate()
   const { t } = useTranslation();
   const handleSubmit = (values, { resetForm }) => {
-    console.log(values)
+    const { email, password } = values
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user)
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+      });
     resetForm();
   };
   return (
@@ -63,7 +78,7 @@ const RegisterForm = () => {
         </FormLabel>
         <Box>
           <RegisterBtn type='submit'>{t('description.registerBtn')}</RegisterBtn>
-          <LoginBtn type='submit'>{t('description.logInBtn')}</LoginBtn>
+          <LoginBtn type='button' onClick={() => navigate('/login')}>{t('description.logInBtn')}</LoginBtn>
         </Box>
       </RegistrationForm>
     </Formik>
