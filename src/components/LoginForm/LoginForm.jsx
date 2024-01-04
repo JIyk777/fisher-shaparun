@@ -3,12 +3,16 @@ import { RegisterBtn, LoginBtn, FormLabel, IconBox, LogForm, Input, ErrorText } 
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { IoMdKey } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
 import Logo from '../Logo/Logo';
-import { useTranslation } from 'react-i18next';
 import Box from '../Box';
+
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../firebaseConfig';
 
 const initialValues = {
   password: '',
@@ -20,9 +24,22 @@ const schema = yup.object().shape({
   email: yup.string().email().required(),
 });
 const LoginForm = () => {
+  const navigate = useNavigate()
   const { t } = useTranslation();
   const handleSubmit = (values, { resetForm }) => {
-    console.log(values)
+    const { email, password } = values
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user)
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+      });
     resetForm();
   };
   return (
@@ -53,7 +70,7 @@ const LoginForm = () => {
         </FormLabel>
         <Box>
           <LoginBtn type='submit'>{t('description.logInBtn')}</LoginBtn>
-          <RegisterBtn type='submit'>{t('description.registerBtn')}</RegisterBtn>
+          <RegisterBtn type='button' onClick={() => navigate('/register')}>{t('description.registerBtn')}</RegisterBtn>
         </Box>
       </LogForm>
     </Formik>
