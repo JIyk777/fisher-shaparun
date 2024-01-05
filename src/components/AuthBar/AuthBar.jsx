@@ -2,10 +2,8 @@ import { AuthBarContainer, AuthBarText, LogOut } from './AuthBar.styled';
 import { MdExitToApp } from "react-icons/md";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../firebaseConfig';
-import { useNavigate } from 'react-router-dom';
 
 const AuthBar = () => {
-  const navigate = useNavigate()
   const handelLogOut = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
