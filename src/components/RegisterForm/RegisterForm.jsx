@@ -76,7 +76,7 @@ const RegisterForm = () => {
           <Input type='email' placeholder='https://example.com' name='email' />
           <ErrorText name='email' component='div'></ErrorText>
         </FormLabel>
-        <Box>
+        <Box width='100%'>
           <RegisterBtn type='submit'>{t('description.registerBtn')}</RegisterBtn>
           <LoginBtn type='button' onClick={() => navigate('/login')}>{t('description.logInBtn')}</LoginBtn>
         </Box>

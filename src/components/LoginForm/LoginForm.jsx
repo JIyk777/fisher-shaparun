@@ -67,7 +67,7 @@ const LoginForm = () => {
           />
           <ErrorText name='password' component='div'></ErrorText>
         </FormLabel>
-        <Box>
+        <Box width='100%'>
           <LoginBtn type='submit'>{t('description.logInBtn')}</LoginBtn>
           <RegisterBtn type='button' onClick={() => navigate('/register')}>{t('description.registerBtn')}</RegisterBtn>
         </Box>
