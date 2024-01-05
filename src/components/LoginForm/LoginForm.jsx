@@ -40,7 +40,6 @@ const LoginForm = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage)
       });
-    resetForm();
   };
   return (
     <Formik
