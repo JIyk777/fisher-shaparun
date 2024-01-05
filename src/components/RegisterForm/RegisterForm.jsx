@@ -35,6 +35,7 @@ const RegisterForm = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user)
+        navigate('/login')
       })
       .catch((error) => {
         const errorCode = error.code;
